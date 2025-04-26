@@ -1,74 +1,85 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אלמנטים - הבחירה שלך</title>
-
-    <link rel="stylesheet" href="assets/css/main.css">
-    <meta name="description" content="דוגמאות לאלמנטים במיזם הבחירה שלך - עיצוב תואם ועקבי.">
-    <meta name="keywords" content="הבחירה שלך, אלמנטים, כפתורים, תפריטים">
-    <meta name="author" content="דוד סויסא">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הבחירה שלך - אלמנטים</title>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
+<body class="is-preload">
 
-<body id="top">
+<!-- אזור באנר פשוט -->
+<section id="banner" style="background-color: #dbd1b4;">
+  <div class="inner">
+    <h1>אלמנטים באתר</h1>
+    <p>דוגמאות לעיצוב אלמנטים מהאתר</p>
+  </div>
+</section>
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">טוען אלמנטים...</div>
-    </div>
+<!-- אזור אלמנטים בסיסיים -->
+<section id="one" class="wrapper style1">
+  <div class="inner">
+    <header class="major">
+      <h2>טפסים, כפתורים, אייקונים ועוד</h2>
+    </header>
 
-    <!-- ניווט -->
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html">בית</a></li>
-            <li><a href="generic.html">עמוד כללי</a></li>
-            <li><a href="elements.html" class="active">אלמנטים</a></li>
-            <li><a href="contact.html">צור קשר</a></li>
-        </ul>
-    </nav>
+    <!-- טופס דוגמא -->
+    <h3>טופס יצירת קשר:</h3>
+    <form class="contact-form" action="https://formspree.io/f/xwpoprpb" method="POST">
+      <input type="text" name="name" placeholder="שם מלא" required>
+      <input type="email" name="email" placeholder="אימייל" required>
+      <textarea name="message" placeholder="הודעה" rows="5" required></textarea>
+      <input type="submit" value="שלח">
+    </form>
 
-    <!-- תוכן ראשי -->
-    <div id="wrapper">
+    <!-- כפתורים -->
+    <h3>כפתורים:</h3>
+    <ul class="actions stacked">
+      <li><a href="#" class="button primary">כפתור ראשי</a></li>
+      <li><a href="#" class="button">כפתור רגיל</a></li>
+    </ul>
 
-        <section id="elements" class="main special">
-            <header class="major">
-                <h1>דוגמאות לאלמנטים</h1>
-            </header>
+    <!-- רשימות -->
+    <h3>רשימות:</h3>
+    <ul>
+      <li>משימה ראשונה</li>
+      <li>משימה שנייה</li>
+      <li>משימה שלישית</li>
+    </ul>
 
-            <p>בעמוד זה תמצאו דוגמאות לעיצוב אלמנטים כמו כפתורים, טפסים, בלוקים של טקסטים ורשימות - הכול בעיצוב המיזם "הבחירה שלך".</p>
+    <h3>רשימה ממוספרת:</h3>
+    <ol>
+      <li>שלב ראשון</li>
+      <li>שלב שני</li>
+      <li>שלב שלישי</li>
+    </ol>
 
-            <h2>כפתור לדוגמה:</h2>
-            <button>כפתור הדגמה</button>
+    <!-- ציטוט -->
+    <h3>ציטוט השראה:</h3>
+    <blockquote>
+      "כשאתה בוחר, אתה משנה את העתיד" – דיפאק צ'ופרה
+    </blockquote>
 
-            <h2>שדה טקסט:</h2>
-            <input type="text" placeholder="הכנס טקסט כאן">
+    <!-- אייקונים -->
+    <h3>אייקונים:</h3>
+    <ul class="icons">
+      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+    </ul>
 
-            <h2>תיבת טקסט:</h2>
-            <textarea placeholder="כתוב כאן את הודעתך"></textarea>
+  </div>
+</section>
 
-            <h2>רשימה:</h2>
-            <ul>
-                <li>פריט ראשון</li>
-                <li>פריט שני</li>
-                <li>פריט שלישי</li>
-            </ul>
-
-        </section>
-
-    </div>
-
-    <!-- כפתור חזור למעלה -->
-    <a href="#top" id="back-to-top" style="display:none;">⬆️</a>
-
-    <!-- סקריפטים -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- פוטר -->
+<footer id="footer">
+  <ul class="icons">
+    <li><a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+    <li><a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+    <li><a href="https://www.linkedin.com/in/david-swissa" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+  </ul>
+  <p>כל הזכויות שמורות לדוד סויסא © 2025</p>
+</footer>
 
 </body>
 </html>
