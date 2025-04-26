@@ -1,45 +1,45 @@
-Spectral by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# מיזם: הבחירה שלך - דוד סויסא
 
+הבחירה שלך הוא מיזם חברתי שמטרתו ללוות צעירים, בני נוער, הורים ואנשי חינוך ברגעים משמעותיים בחיים - דרך העצמת יכולת הבחירה, קבלת החלטות מתוך ערכים, וחיזוק תחושת המסוגלות האישית.
 
-A big, modern, blocky affair with a mobile-style menu, fully responsive styling,
-and an assortment of pre-styled elements. So, pretty much what you were expecting
--- except, of course, for how it's put together, specifically:
+---
 
-- It's built with components from my Responsive Tools project.
+## מה כולל האתר:
 
-- It uses flexbox, which eliminates all kinds of terrible hacks and clunky layout
-  stopgaps (like CSS grid systems).
+- עמוד בית: להוביל מתוך בחירה, לבחור מתוך ערכים, ללוות ברגעים שמשנים חיים.
+- עמוד תוכן כללי: הרחבות, סיפורי השראה, טיפים והכוונה אישית.
+- עמוד צור קשר: טופס פשוט ליצירת קשר עם דוד סויסא.
+- עמוד דוגמאות לאלמנטים: תצוגת דוגמאות לעיצוב האתר.
+- עיצוב חמים ונעים בצבעי בז׳, כתום וחום בהיר, בהתאמה ללוגו המיזם.
+- גלילה חלקה, פרילודר, כפתור חזור למעלה, ניווט ברור.
+- קישורים לרשתות החברתיות: פייסבוק, אינסטגרם, לינקדאין.
+- לוגו אישי ותמונת פתיחה מחממת.
 
-- It uses Sass* a lot more intelligently, thanks in part to several new mixins
-  and functions I've been working on (as well as a few by @HugoGiraudel).
+---
 
-  (* = still entirely optional if you prefer vanilla CSS :)
+## טכנולוגיות בשימוש:
 
-- A ton of other stuff.
+- HTML5
+- CSS3
+- JavaScript (JQuery, Intersection Observer)
+- רספונסיביות מלאה לסלולרי ודסקטופ
+- אירוח על גבי GitHub Pages ו־Vercel
 
-In short, Spectral's the culmination of several new things I'm working on/trying out,
-so please, let me know what you think :)
+---
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+## זכויות יוצרים:
 
-(* = not included)
+כל הזכויות שמורות © דוד סויסא 2025.  
+אין לעשות שימוש במיזם, בטקסטים, בתמונות או בכל חלק מהאתר ללא אישור מראש.
 
-AJ
-aj@lkn.io | @ajlkn
+---
 
+## פרטי קשר:
 
-Credits:
+- מייל: (ניתן לעדכן)
+- טלפון: +972-52-898-2780
+- פייסבוק: https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr
+- אינסטגרם: https://www.instagram.com/davidyourchoice
+- לינקדאין: https://www.linkedin.com/in/david-swissa
 
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+---
