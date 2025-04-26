@@ -1,179 +1,228 @@
-/* עיצוב כללי */
+/* בסיס כללי */
 body {
-  font-family: 'Assistant', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f5ef; /* רקע בז׳ בהיר */
-  color: #333;
-  direction: rtl;
+    background-color: #f8f5f0; /* בז' רך */
+    color: #333; /* טקסט אפור כהה */
+    font-family: "Varela Round", sans-serif;
+    direction: rtl;
 }
 
-h1, h2, h3, h4 {
-  color: #8b5e3c; /* חום חמים */
-}
-
-p {
-  font-size: 18px;
-  line-height: 1.8;
-}
-
+/* קישורים */
 a {
-  text-decoration: none;
-  color: #8b5e3c;
+    color: #e57c23; /* כתום חם */
+    text-decoration: none;
 }
 
 a:hover {
-  color: #f5a623;
+    color: #bf5b00; /* כתום כהה */
 }
 
-/* תפריט ניווט */
-#header {
-  background-color: #ffffff;
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* כפתורים */
+.button {
+    background-color: #e57c23;
+    color: #fff;
+    border: none;
+    padding: 0.75em 2em;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-#header img {
-  height: 50px;
+.button:hover {
+    background-color: #bf5b00;
 }
 
-/* תפריט הקישורים */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
+/* Hero Section */
+#intro {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/david.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #ffffff;
 }
 
-nav li a {
-  color: #333;
-  font-weight: bold;
-  font-size: 18px;
-  transition: color 0.3s;
+/* אזור ראשי (סקשנים) */
+.main {
+    padding: 6em 4em 6em 4em;
 }
 
-nav li a:hover {
-  color: #f5a623;
+.main.style1 {
+    background-color: #fff6e5; /* רקע בהיר-בז' */
+    color: #333;
 }
 
-/* אזור הפתיח */
-#hero {
-  background: linear-gradient(to bottom right, #dbd1b4, #f5c185);
-  padding: 100px 20px;
-  text-align: center;
+.main.style2 {
+    background-color: #dbd1b4; /* חום בהיר מהלוגו */
+    color: #222;
 }
 
-#hero h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
+.main.dark {
+    background-color: #8d6748; /* חום כהה חם */
+    color: #fff;
 }
 
-#hero a {
-  background-color: #f5a623;
-  color: #fff;
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-size: 20px;
+/* קופסאות טקסט */
+.box.style2 {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2em;
+    border-radius: 20px;
 }
 
-/* כלל הסקשנים */
-.wrapper {
-  padding: 80px 20px;
+/* טפסים */
+form input, form textarea {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
-.wrapper .inner {
-  max-width: 900px;
-  margin: auto;
+form input[type="submit"] {
+    background-color: #e57c23;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
-/* עיצוב כפתורים */
-button {
-  background-color: #f5a623;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+form input[type="submit"]:hover {
+    background-color: #bf5b00;
 }
 
-button:hover {
-  background-color: #e89e1d;
+/* רשתות חברתיות */
+.icons a {
+    color: #e57c23;
+    font-size: 2em;
+    margin: 0 0.5em;
 }
 
-/* עיצוב טפסים */
-input[type=\"text\"], input[type=\"email\"], textarea {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-textarea {
-  height: 150px;
-}
-
-/* עיצוב סקשן הבחירות */
-.choice {
-  margin-bottom: 60px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.choice img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 20px;
+.icons a:hover {
+    color: #bf5b00;
 }
 
 /* פוטר */
 #footer {
-  background-color: #dbd1b4;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 16px;
+    background-color: #f5eee1;
+    color: #555;
+    text-align: center;
+    padding: 3em 0;
+    font-size: 0.9em;
 }
 
-#footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+#footer .copyright {
+    margin-top: 2em;
 }
 
-#footer ul li a {
-  color: #8b5e3c;
-  font-size: 20px;
-  transition: color 0.3s;
+/* גריד - אזור הבחירות / מאמרים */
+.posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    margin-top: 4em;
 }
 
-#footer ul li a:hover {
-  color: #f5a623;
+.posts article {
+    background: #ffffff;
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* רספונסיביות מובייל */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
+.posts article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
-  #hero h1 {
+.posts article h3 {
+    font-size: 1.5em;
+    margin-top: 1em;
+    color: #e57c23;
+}
+
+.posts article p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* כפתורים צפים */
+#whatsapp-button,
+#facebook-button,
+#instagram-button {
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    border-radius: 50%;
+    background-color: #e57c23;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     font-size: 28px;
-  }
+    text-decoration: none;
+}
 
-  #hero a {
-    padding: 12px 25px;
-    font-size: 18px;
-  }
+#facebook-button {
+    bottom: 95px;
+}
+
+#instagram-button {
+    bottom: 165px;
+}
+
+#whatsapp-button:hover,
+#facebook-button:hover,
+#instagram-button:hover {
+    background-color: #bf5b00;
+}
+
+/* טפסים מתקדמים */
+form {
+    margin-top: 2em;
+}
+
+form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+form .field {
+    flex: 1 1 45%;
+}
+
+form textarea {
+    height: 150px;
+}
+
+/* כותרות */
+h1, h2, h3, h4, h5 {
+    font-family: "Varela Round", sans-serif;
+    color: #8d6748;
+}
+
+/* אנימציות כניסה */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px);}
+    100% { opacity: 1; transform: translateY(0);}
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* התאמות מובייל */
+@media (max-width: 768px) {
+    .posts {
+        grid-template-columns: 1fr;
+    }
+
+    #whatsapp-button,
+    #facebook-button,
+    #instagram-button {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
 }
