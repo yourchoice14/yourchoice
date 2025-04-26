@@ -1,198 +1,179 @@
 /* עיצוב כללי */
-html {
-  scroll-behavior: smooth;
-}
-
 body {
+  font-family: 'Assistant', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f5ef; /* רקע בז׳ בהיר */
+  color: #333;
   direction: rtl;
-  background-color: #FAE8D4; /* צבע בז׳ חם */
-  color: #35524A; /* ירוק-חום רגוע */
-  font-family: 'Heebo', 'Alef', 'Varela Round', sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
-/* פרילודר */
-#preloader {
-  background-color: #FAE8D4;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 10000;
-  top: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
-  color: #35524A;
+h1, h2, h3, h4 {
+  color: #8b5e3c; /* חום חמים */
 }
 
-.loader {
-  animation: fadeText 2s infinite;
-}
-
-@keyframes fadeText {
-  0% { opacity: 0.3; }
-  50% { opacity: 1; }
-  100% { opacity: 0.3; }
-}
-
-/* ניווט */
-#nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background: #FF8C42;
-}
-
-#nav ul li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-#nav ul li a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-#nav ul li a:hover, 
-#nav ul li a.active {
-  background: #FFB570;
-  border-radius: 8px;
-}
-
-/* תוכן ראשי */
-.main {
-  padding: 4em 2em;
-  margin: 2em auto;
-  max-width: 800px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.main.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* כותרות */
-header.major h1, header.major h2 {
-  font-size: 2em;
-  color: #FF8C42;
-  margin-bottom: 0.5em;
-}
-
-/* טקסט */
-.main p {
-  font-size: 1.2em;
+p {
+  font-size: 18px;
   line-height: 1.8;
 }
 
-/* בלוקים מיוחדים */
-blockquote {
-  background: #FFF2E1;
-  border-right: 5px solid #FF8C42;
-  padding: 1em;
-  margin: 2em 0;
-  font-style: italic;
+a {
+  text-decoration: none;
+  color: #8b5e3c;
 }
 
-/* טפסים */
-input, textarea {
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+a:hover {
+  color: #f5a623;
 }
 
-button {
-  background: #FF8C42;
-  color: white;
-  border: none;
-  padding: 1em 2em;
-  border-radius: 8px;
-  cursor: pointer;
+/* תפריט ניווט */
+#header {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#header img {
+  height: 50px;
+}
+
+/* תפריט הקישורים */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav li a {
+  color: #333;
   font-weight: bold;
-  transition: transform 0.3s ease;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav li a:hover {
+  color: #f5a623;
+}
+
+/* אזור הפתיח */
+#hero {
+  background: linear-gradient(to bottom right, #dbd1b4, #f5c185);
+  padding: 100px 20px;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+#hero a {
+  background-color: #f5a623;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+
+/* כלל הסקשנים */
+.wrapper {
+  padding: 80px 20px;
+}
+
+.wrapper .inner {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* עיצוב כפתורים */
+button {
+  background-color: #f5a623;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background: #FFB570;
-  transform: scale(1.05);
+  background-color: #e89e1d;
 }
 
-/* כפתור חזור למעלה */
-#back-to-top {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #FF8C42;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 50%;
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  display: none;
-  z-index: 1000;
-  transition: background 0.3s;
+/* עיצוב טפסים */
+input[type=\"text\"], input[type=\"email\"], textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
 }
 
-#back-to-top:hover {
-  background: #FFB570;
+textarea {
+  height: 150px;
 }
 
-/* אייקונים רשתות חברתיות */
-ul.icons {
-  list-style: none;
-  margin: 2em 0;
-  padding: 0;
-  text-align: center;
-}
-
-ul.icons li {
-  display: inline-block;
-  margin: 0 0.5em;
-}
-
-ul.icons li a {
-  color: #35524A;
-  font-size: 2em;
-  transition: transform 0.3s ease;
-}
-
-ul.icons li a:hover {
-  transform: rotate(10deg);
-  color: #FF8C42;
-}
-
-/* תמונות */
-.logo {
-  width: 120px;
-  margin-bottom: 1em;
-}
-
-.david-photo {
-  width: 150px;
-  margin-top: 20px;
+/* עיצוב סקשן הבחירות */
+.choice {
+  margin-bottom: 60px;
+  background: #ffffff;
   border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* פרלקס לתמונת רקע */
-header {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.choice img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* פוטר */
+#footer {
+  background-color: #dbd1b4;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#footer ul li a {
+  color: #8b5e3c;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+#footer ul li a:hover {
+  color: #f5a623;
+}
+
+/* רספונסיביות מובייל */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+  }
+
+  #hero a {
+    padding: 12px 25px;
+    font-size: 18px;
+  }
 }
