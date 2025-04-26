@@ -1,31 +1,52 @@
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* בסיס כללי */
+body {
+    background-color: #f8f5f0;
+    color: #333;
+    font-family: "Varela Round", sans-serif;
+    direction: rtl;
+}
 
-/* Banner */
+/* מבטל אנימציות */
+* {
+    animation: none !important;
+    transition: none !important;
+}
 
-	body.is-preload #banner h2 {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
-	}
+/* קישורים */
+a {
+    color: #e57c23;
+    text-decoration: underline;
+}
 
-		body.is-preload #banner h2:before, body.is-preload #banner h2:after {
-			width: 100%;
-		}
+/* כפתורים */
+.button {
+    background-color: #e57c23;
+    color: #fff;
+    border: none;
+    padding: 0.75em 2em;
+    border-radius: 30px;
+    font-weight: bold;
+}
 
-	body.is-preload #banner .more {
-		-moz-transform: none;
-		-webkit-transform: none;
-		-ms-transform: none;
-		transform: none;
-		opacity: 1;
-	}
+/* אזורי תוכן */
+.main {
+    padding: 4em 2em;
+    background: #fff6e5;
+    color: #333;
+}
 
-	body.is-preload #banner:after {
-		opacity: 0;
-	}
+/* טפסים */
+form input, form textarea {
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+}
+
+/* פוטר */
+#footer {
+    background-color: #f5eee1;
+    text-align: center;
+    padding: 2em 0;
+    font-size: 0.9em;
+}
