@@ -1,63 +1,86 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צור קשר - הבחירה שלך</title>
-
-    <link rel="stylesheet" href="assets/css/main.css">
-    <meta name="description" content="צור קשר עם דוד סויסא, מיזם הבחירה שלך - ליווי אישי לנוער, הורים ואנשי חינוך.">
-    <meta name="keywords" content="צור קשר, הבחירה שלך, ליווי אישי, קבלת החלטות, נוער">
-    <meta name="author" content="דוד סויסא">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>צור קשר - הבחירה שלך</title>
+  <link rel="stylesheet" href="assets/css/main.css">
 </head>
+<body class="is-preload">
 
-<body id="top">
+<!-- אזור באנר -->
+<section id="banner" style="background-color: #dbd1b4;">
+  <div class="inner">
+    <h1>צור קשר</h1>
+    <p>מוזמנים להשאיר פרטים ואחזור אליכם בהקדם</p>
+  </div>
+</section>
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">טוען את הבחירה שלך...</div>
-    </div>
-
-    <!-- ניווט -->
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html">בית</a></li>
-            <li><a href="#contact" class="active">צור קשר</a></li>
+<!-- אזור טופס יצירת קשר -->
+<section id="contact" class="wrapper style1">
+  <div class="inner">
+    <section>
+      <form method="POST" action="https://formspree.io/f/xwpoprpb" class="contact-form">
+        <div class="fields">
+          <div class="field half">
+            <label>שם מלא</label>
+            <input type="text" name="name" id="name" placeholder="הכניסו את שמכם" required>
+          </div>
+          <div class="field half">
+            <label>כתובת אימייל</label>
+            <input type="email" name="email" id="email" placeholder="הכניסו אימייל" required>
+          </div>
+          <div class="field half">
+            <label>טלפון</label>
+            <input type="tel" name="phone" id="phone" placeholder="מספר טלפון" required>
+          </div>
+          <div class="field half">
+            <label>שם החברה / מוסד</label>
+            <input type="text" name="company" id="company" placeholder="לדוגמה: תיכון אורט">
+          </div>
+          <div class="field">
+            <label>הודעה</label>
+            <textarea name="message" id="message" rows="6" placeholder="כתבו את פנייתכם כאן" required></textarea>
+          </div>
+        </div>
+        <ul class="actions">
+          <li><input type="submit" value="שליחה" class="primary" /></li>
         </ul>
-    </nav>
+      </form>
+    </section>
 
-    <!-- תוכן ראשי -->
-    <div id="wrapper">
+    <!-- מידע ליצירת קשר -->
+    <section class="split">
+      <section>
+        <h3>טלפון</h3>
+        <p><a href="tel:+972528982780">052-898-2780</a></p>
+      </section>
+      <section>
+        <h3>אימייל</h3>
+        <p><a href="mailto:yourchoice.david.swissa@gmail.com">yourchoice.david.swissa@gmail.com</a></p>
+      </section>
+      <section>
+        <h3>רשתות חברתיות</h3>
+        <ul class="icons alt">
+          <li><a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+          <li><a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+          <li><a href="https://www.linkedin.com/in/david-swissa" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+        </ul>
+      </section>
+    </section>
 
-        <section id="contact" class="main special">
-            <header class="major">
-                <h1>צור קשר</h1>
-            </header>
-            <p>לשיחה אישית, לפרטים נוספים או להזמנת הרצאה - מוזמנים להשאיר פרטים בטופס ואחזור אליכם בהקדם.</p>
+  </div>
+</section>
 
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-                <input type="text" name="name" placeholder="שם מלא" required>
-                <input type="email" name="email" placeholder="דוא"ל" required>
-                <input type="text" name="company" placeholder="שם החברה">
-                <input type="text" name="phone" placeholder="טלפון">
-                <textarea name="message" placeholder="הודעה" required></textarea>
-                <button type="submit">שלח</button>
-            </form>
-        </section>
-
-    </div>
-
-    <!-- כפתור חזור למעלה -->
-    <a href="#top" id="back-to-top" style="display:none;">⬆️</a>
-
-    <!-- סקריפטים -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+<!-- פוטר -->
+<footer id="footer">
+  <ul class="icons">
+    <li><a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
+    <li><a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+    <li><a href="https://www.linkedin.com/in/david-swissa" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+  </ul>
+  <p>בסוף כל דרך יש בחירה – לבחור להמשיך, לבחור להשתנות, לבחור לגדול.<br>כל הזכויות שמורות לדוד סויסא © 2025</p>
+</footer>
 
 </body>
 </html>
