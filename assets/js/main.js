@@ -1,83 +1,63 @@
-/*
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
+// עטיפת כל הקוד כדי למנוע התנגשויות
 (function($) {
 
-	var	$window = $(window),
-		$body = $('body'),
-		$wrapper = $('#page-wrapper'),
-		$banner = $('#banner'),
-		$header = $('#header');
+  // פרילודר - העלמתו אחרי טעינת העמוד
+  $(window).on('load', function() {
+    $('#preloader').fadeOut('slow', function() {
+      $(this).remove();
+    });
+  });
 
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ null,      '480px'  ]
-		});
+  // גלילה חלקה בתוך האתר
+  $(function() {
+    $('#nav a, #back-to-top').click(function(e) {
+      e.preventDefault();
+      var target = $(this).attr('href');
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 800);
+    });
+  });
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // כפתור חזור למעלה - הצגה והסתרה לפי הגלילה
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+      $('#back-to-top').fadeIn();
+    } else {
+      $('#back-to-top').fadeOut();
+    }
+  });
 
-	// Mobile?
-		if (browser.mobile)
-			$body.addClass('is-mobile');
-		else {
+  // הופעת סקשנים בעדינות (Fade+Slide) תוך כדי גלילה
+  const sections = document.querySelectorAll('section');
 
-			breakpoints.on('>medium', function() {
-				$body.removeClass('is-mobile');
-			});
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
 
-			breakpoints.on('<=medium', function() {
-				$body.addClass('is-mobile');
-			});
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 
-		}
+  // הדגשת קישור פעיל בתפריט ניווט
+  $(window).on('scroll', function() {
+    var position = $(this).scrollTop();
 
-	// Scrolly.
-		$('.scrolly')
-			.scrolly({
-				speed: 1500,
-				offset: $header.outerHeight()
-			});
+    $('section').each(function() {
+      var target = $(this).offset().top - 120;
+      var id = $(this).attr('id');
 
-	// Menu.
-		$('#menu')
-			.append('<a href="#menu" class="close"></a>')
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'right',
-				target: $body,
-				visibleClass: 'is-menu-visible'
-			});
-
-	// Header.
-		if ($banner.length > 0
-		&&	$header.hasClass('alt')) {
-
-			$window.on('resize', function() { $window.trigger('scroll'); });
-
-			$banner.scrollex({
-				bottom:		$header.outerHeight() + 1,
-				terminate:	function() { $header.removeClass('alt'); },
-				enter:		function() { $header.addClass('alt'); },
-				leave:		function() { $header.removeClass('alt'); }
-			});
-
-		}
+      if (position >= target) {
+        $('#nav ul li a').removeClass('active');
+        $('#nav ul li a[href="#' + id + '"]').addClass('active');
+      }
+    });
+  });
 
 })(jQuery);
