@@ -1,178 +1,152 @@
-/* בסיס עיצוב */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Heebo', 'Varela Round', sans-serif;
-  direction: rtl;
-  background-color: #fff8f0;
-  color: #5a4637;
-  scroll-behavior: smooth;
+/* כללי */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Heebo', sans-serif;
+    background: #dbd1b4;
+    color: #333;
+    direction: rtl;
 }
 
-/* אזור באנר ראשי */
-#banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-#banner .inner {
-  z-index: 2;
-  color: #fff;
-}
-
-#banner::after {
-  content: "";
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  color: #5a4637;
-}
-
-/* אזורים רגילים */
-section.wrapper {
-  padding: 6em 2em;
-  text-align: center;
-}
-
-.wrapper.style1 {
-  background-color: #dbd1b4;
-}
-
-.wrapper.style3 {
-  background-color: #fcebd7;
-}
-
-/* אזורים מתחלפים */
-.wrapper.alt {
-  background: #fff;
-}
-
-.spotlight {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2em 1em;
-}
-
-.spotlight .image {
-  max-width: 300px;
-  margin-bottom: 2em;
-}
-
-.spotlight .image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.spotlight .content {
-  max-width: 600px;
-}
-
-/* טפסים */
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.contact-form input, .contact-form textarea {
-  width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
-  border: 1px solid #c7b39a;
-  border-radius: 5px;
-}
-
-.contact-form input[type="submit"] {
-  background-color: #e4a972;
-  color: #fff;
-  border: none;
-  padding: 1em 2em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form input[type="submit"]:hover {
-  background-color: #d18b5f;
+/* קישורים */
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 /* כפתורים */
-.button.primary {
-  background-color: #e4a972;
-  color: #fff;
-  border: none;
-  padding: 0.8em 2em;
-  font-size: 1.2em;
-  border-radius: 50px;
-  transition: background-color 0.3s ease;
+.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: #f4a261;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
 }
 
-.button.primary:hover {
-  background-color: #d18b5f;
+.button:hover {
+    background-color: #e76f51;
 }
 
-/* אזור האייקונים */
+/* עיצוב לאזורי הדף */
+section {
+    padding: 5em 2em;
+    text-align: center;
+    position: relative;
+}
+
+section.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+section.primary {
+    background-color: #f4a261;
+    color: #fff;
+}
+
+section.fullscreen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* תיבה */
+.box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2em;
+    border-radius: 10px;
+}
+
+/* כותרות */
+h1, h2, h3 {
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+/* טופס */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form .fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+form .field {
+    flex: 1;
+    min-width: 200px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* אייקונים */
 .icons {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  margin-top: 2em;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 2em;
 }
 
 .icons li {
-  margin: 0 10px;
+    display: inline-block;
 }
 
 .icons a {
-  color: #5a4637;
-  font-size: 1.8em;
-  transition: color 0.3s ease;
+    font-size: 1.5em;
+    color: inherit;
 }
 
-.icons a:hover {
-  color: #e4a972;
+/* זכויות יוצרים */
+footer p.copyright {
+    margin-top: 2em;
+    font-size: 0.9em;
 }
 
-/* פוטר */
-#footer {
-  background-color: #dbd1b4;
-  padding: 2em 0;
-  text-align: center;
-  font-size: 0.9em;
+/* עיצוב שכבת ההאפלה בתמונה ראשית */
+#intro .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* כפתורי גלילה */
-.more.scrolly {
-  position: absolute;
-  bottom: 20px;
-  right: 50%;
-  transform: translateX(50%);
-  color: #fff;
-  font-size: 1.5em;
+/* כפתור גלילה */
+.button.down {
+    margin-top: 2em;
 }
 
-/* מובייל התאמות */
-@media (min-width: 768px) {
-  .spotlight {
-    flex-direction: row;
-    text-align: right;
-    justify-content: center;
-  }
-  .spotlight .image {
-    margin: 0 2em 0 0;
-  }
+/* אנימציות קטנות */
+.content header, .content p, .content ul, form {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.active .content header,
+section.active .content p,
+section.active .content ul,
+section.active form {
+    opacity: 1;
+    transform: translateY(0);
 }
