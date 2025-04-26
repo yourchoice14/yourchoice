@@ -1,228 +1,211 @@
+/* קובץ main.css המלא לאתר "הבחירה שלך" */
+
 /* בסיס כללי */
 body {
-    background-color: #f8f5f0; /* בז' רך */
-    color: #333; /* טקסט אפור כהה */
-    font-family: "Varela Round", sans-serif;
     direction: rtl;
+    text-align: right;
+    font-family: 'Heebo', sans-serif;
+    background-color: #fff8f0;
+    color: #3b3b3b;
+    margin: 0;
+    padding: 0;
 }
 
-/* קישורים */
-a {
-    color: #e57c23; /* כתום חם */
-    text-decoration: none;
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: #5e4630;
 }
 
-a:hover {
-    color: #bf5b00; /* כתום כהה */
+p {
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+
+/* באנר פתיחה */
+#banner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+#banner .inner {
+    text-align: center;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+/* אזורי טקסט */
+.wrapper {
+    padding: 5em 2em;
+}
+
+.wrapper.special {
+    background-color: #dbd1b4;
+}
+
+.wrapper.alt {
+    background-color: #f3e6d0;
+}
+
+.wrapper.style1 {
+    background-color: #fff;
+}
+
+.wrapper.style2 {
+    background-color: #f5eee0;
+}
+
+.wrapper.style3 {
+    background-color: #e8dacb;
+}
+
+/* קטעי Spotlight */
+.spotlight {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+
+.spotlight .image {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.spotlight .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.spotlight .content {
+    flex: 1 1 60%;
+    padding: 1em;
 }
 
 /* כפתורים */
 .button {
-    background-color: #e57c23;
-    color: #fff;
-    border: none;
+    display: inline-block;
+    background: #ff8c42;
+    color: #ffffff;
     padding: 0.75em 2em;
     border-radius: 30px;
+    text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
 }
 
 .button:hover {
-    background-color: #bf5b00;
+    background: #ff6600;
 }
 
-/* Hero Section */
-#intro {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/david.jpg');
-    background-size: cover;
-    background-position: center;
+/* כפתורי רשתות חברתיות */
+ul.icons {
+    list-style: none;
+    padding: 0;
+    margin: 2em 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul.icons li {
+    margin: 0 0.5em;
+}
+
+ul.icons a {
+    color: #5e4630;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+ul.icons a:hover {
+    color: #ff8c42;
+}
+
+/* פוטר */
+#footer {
+    background: #dbd1b4;
+    padding: 2em 0;
     text-align: center;
-    color: #ffffff;
+    font-size: 0.9em;
 }
 
-/* אזור ראשי (סקשנים) */
-.main {
-    padding: 6em 4em 6em 4em;
-}
-
-.main.style1 {
-    background-color: #fff6e5; /* רקע בהיר-בז' */
-    color: #333;
-}
-
-.main.style2 {
-    background-color: #dbd1b4; /* חום בהיר מהלוגו */
-    color: #222;
-}
-
-.main.dark {
-    background-color: #8d6748; /* חום כהה חם */
-    color: #fff;
-}
-
-/* קופסאות טקסט */
-.box.style2 {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 2em;
-    border-radius: 20px;
-}
-
-/* טפסים */
+/* טופס צור קשר */
 form input, form textarea {
     width: 100%;
     padding: 1em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
-form input[type="submit"] {
-    background-color: #e57c23;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #bf5b00;
-}
-
-/* רשתות חברתיות */
-.icons a {
-    color: #e57c23;
-    font-size: 2em;
-    margin: 0 0.5em;
-}
-
-.icons a:hover {
-    color: #bf5b00;
-}
-
-/* פוטר */
-#footer {
-    background-color: #f5eee1;
-    color: #555;
-    text-align: center;
-    padding: 3em 0;
-    font-size: 0.9em;
-}
-
-#footer .copyright {
-    margin-top: 2em;
-}
-
-/* גריד - אזור הבחירות / מאמרים */
-.posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2em;
-    margin-top: 4em;
-}
-
-.posts article {
-    background: #ffffff;
-    padding: 2em;
-    border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.posts article:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-.posts article h3 {
-    font-size: 1.5em;
-    margin-top: 1em;
-    color: #e57c23;
-}
-
-.posts article p {
-    font-size: 1em;
-    color: #555;
-}
-
-/* כפתורים צפים */
-#whatsapp-button,
-#facebook-button,
-#instagram-button {
-    width: 55px;
-    height: 55px;
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    z-index: 1000;
-    border-radius: 50%;
-    background-color: #e57c23;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+form button {
+    background-color: #ff8c42;
     color: white;
-    font-size: 28px;
-    text-decoration: none;
+    border: none;
+    padding: 1em 2em;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-#facebook-button {
-    bottom: 95px;
+form button:hover {
+    background-color: #ff6600;
 }
 
-#instagram-button {
-    bottom: 165px;
-}
-
-#whatsapp-button:hover,
-#facebook-button:hover,
-#instagram-button:hover {
-    background-color: #bf5b00;
-}
-
-/* טפסים מתקדמים */
-form {
-    margin-top: 2em;
-}
-
-form .fields {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-}
-
-form .field {
-    flex: 1 1 45%;
-}
-
-form textarea {
-    height: 150px;
-}
-
-/* כותרות */
-h1, h2, h3, h4, h5 {
-    font-family: "Varela Round", sans-serif;
-    color: #8d6748;
-}
-
-/* אנימציות כניסה */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px);}
-    100% { opacity: 1; transform: translateY(0);}
-}
-
+/* Fade in */
 .fade-in {
-    animation: fadeIn 1s ease-out;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 
-/* התאמות מובייל */
-@media (max-width: 768px) {
-    .posts {
-        grid-template-columns: 1fr;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* מדיה רספונסיבית */
+@media screen and (max-width: 768px) {
+    .spotlight {
+        flex-direction: column;
     }
 
-    #whatsapp-button,
-    #facebook-button,
-    #instagram-button {
-        width: 45px;
-        height: 45px;
-        font-size: 22px;
+    .spotlight .image, .spotlight .content {
+        flex: 1 1 100%;
     }
+
+    #banner {
+        background-position: top center;
+    }
+}
+
+/* כפתורים צפים לרשתות */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.floating-button a {
+    display: block;
+    margin: 10px 0;
+    background: #ff8c42;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.floating-button a:hover {
+    background: #ff6600;
 }
