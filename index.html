@@ -114,18 +114,19 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section bg-light" data-aos="fade-up">
-        <div class="container">
-            <h2>צור קשר</h2>
-            <form action="https://formspree.io/f/xwpoprpb" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="שם מלא" required>
-                <input type="email" name="email" placeholder="אימייל" required>
-                <input type="text" name="company" placeholder="שם החברה (לא חובה)">
-                <textarea name="message" placeholder="הודעה" required></textarea>
-                <button type="submit" class="button-primary">שלח הודעה</button>
-            </form>
-        </div>
-    </section>
+ <section id="contact" class="section bg-light">
+    <div class="container">
+        <h2>צור קשר</h2>
+        <form class="contact-form" action="https://formspree.io/f/xwpoprpb" method="POST">
+            <input type="text" name="name" placeholder="שם מלא" required>
+            <input type="email" name="email" placeholder="אימייל" required>
+            <input type="text" name="company" placeholder="שם חברה">
+            <input type="tel" name="phone" placeholder="טלפון">
+            <textarea name="message" rows="5" placeholder="הודעה" required></textarea>
+            <button type="submit" class="button-primary">שליחה</button>
+        </form>
+    </div>
+</section>
 
 </main>
 
