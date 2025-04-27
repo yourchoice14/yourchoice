@@ -1,283 +1,265 @@
 /* -------------------------------------------------- */
-/*                סטייל ראשי - הבחירה שלך             */
+/*                עיצוב ראשי - הבחירה שלך             */
 /* -------------------------------------------------- */
 
-/* הגדרות בסיסיות */
+/* בסיס */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    direction: rtl;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  direction: rtl;
 }
 
 body {
-    font-family: 'Heebo', sans-serif;
-    background-color: #f9f5f0;
-    color: #5c4033;
-    font-size: 18px;
-    line-height: 1.8;
+  font-family: 'Heebo', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  background-color: #f9f5f0;
+  color: #5c4033;
+  overflow-x: hidden;
 }
 
 /* קישורים */
 a {
-    color: inherit;
-    text-decoration: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
-    color: #f6a623;
+  color: #f6a623;
 }
 
-/* כפתורים */
-.button {
-    display: inline-block;
-    background-color: #f6a623;
-    color: #fff;
-    padding: 12px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.button:hover {
-    background-color: #e6951c;
-}
-
-/* ניווט עליון */
+/* ניווט */
 #header {
-    position: fixed;
-    width: 100%;
-    background: #ffffff;
-    padding: 10px 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 15px 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
 }
 
-#header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-#header nav ul li {
-    display: inline-block;
+#header .container nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 #header nav ul li a {
-    font-weight: 700;
-    font-size: 18px;
-    padding: 5px 15px;
-    transition: color 0.3s ease;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 5px 10px;
 }
 
-/* Hero Section */
+/* פתיחה Hero */
 .hero {
-    background: url('../images/david.jpeg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-    padding: 0 20px;
+  background: url('../images/david.jpeg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
 
 .hero::after {
-    content: "";
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
 }
 
 .hero .container {
-    position: relative;
-    z-index: 1;
+  z-index: 1;
+  position: relative;
+  padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 60px;
-    color: #ffffff;
-    margin-bottom: 20px;
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 24px;
-    color: #f9f5f0;
-    margin-bottom: 30px;
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
 }
 
-/* אזורים כללים */
+.hero .button {
+  background: #f6a623;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.hero .button:hover {
+  background: #e6951c;
+}
+
+/* אזורים */
 .section {
-    padding: 100px 20px;
-    text-align: center;
+  padding: 100px 20px;
+  text-align: center;
 }
 
 .section.light {
-    background-color: #ffffff;
+  background: #ffffff;
 }
 
-/* כותרות */
-h2 {
-    font-size: 42px;
-    margin-bottom: 40px;
-    color: #5c4033;
-}
-
-h3 {
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-/* טקסט כללי */
-p {
-    font-size: 18px;
-}
-
-/* אזור אודות */
+/* חלוקה אודות */
 .split {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
 }
 
 .split .text {
-    flex: 1;
-    min-width: 300px;
-    text-align: right;
+  flex: 1;
+  min-width: 280px;
+  text-align: right;
 }
 
 .split .image {
-    flex: 1;
-    min-width: 300px;
+  flex: 1;
+  min-width: 280px;
 }
 
 .split img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* אזור שירותים */
+/* כפתור כללי */
+.button {
+  display: inline-block;
+  background-color: #f6a623;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #e6951c;
+}
+
+/* אזור למי זה מתאים */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .service {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
 }
 
 .service:hover {
-    transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .service img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* בחירות שעיצבו אותי */
+/* אזור הבחירות שלי */
 .picks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .pick {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.pick:hover {
+  transform: translateY(-8px);
 }
 
 .pick img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* טופס צור קשר */
+/* צור קשר */
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 15px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    resize: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .contact-form button {
-    align-self: center;
-    width: 50%;
+  align-self: center;
+  width: 50%;
 }
 
 /* פוטר */
 #footer {
-    background-color: #5c4033;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px;
+  background: #5c4033;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
 }
 
 #footer p {
-    margin-bottom: 15px;
-}
-
-.socials {
-    margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .socials a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #f6a623;
-    transition: color 0.3s ease;
+  margin: 0 10px;
+  font-size: 24px;
+  color: #f6a623;
 }
 
 .socials a:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /* רספונסיביות */
 @media (max-width: 768px) {
-    .split {
-        flex-direction: column;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero p {
-        font-size: 20px;
-    }
+  .split {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
 }
