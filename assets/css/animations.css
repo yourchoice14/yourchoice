@@ -1,0 +1,26 @@
+/* ------------------------------------------------ */
+/*              Animations for smooth entrance      */
+/* ------------------------------------------------ */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInMove 1.2s ease-out forwards;
+}
+
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* אפקט סיבוב קטן לאייקונים */
+.rotate-icon:hover {
+    transform: rotate(15deg);
+    transition: transform 0.4s ease;
+}
