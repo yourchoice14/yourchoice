@@ -1,140 +1,170 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>הבחירה שלך - דוד סויסא</title>
-    <link rel="stylesheet" href="main.css">
+    <title>הבחירה שלך | דוד סויסא</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- FontAwesome לאייקונים -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
 <body>
 
-<!-- כותרת פתיחה עם תמונה -->
-<header class="hero">
+<!-- Header -->
+<header id="hero" class="hero-section" style="background-image: url('assets/images/david.jpeg');">
     <div class="overlay"></div>
-    <img src="assets/images/david.jpeg" alt="דוד סויסא">
-    <div class="hero-text">
+    <div class="hero-content" data-aos="fade-down" data-aos-duration="1500">
         <h1>הבחירה שלך</h1>
         <p>להוביל מתוך בחירה, לבחור מתוך ערכים, ללות ברגעים שמשנים חיים</p>
+        <a href="#about" class="button-primary scrollto">בואו להכיר</a>
     </div>
 </header>
 
-<!-- ניווט -->
-<nav class="navbar">
+<!-- Navbar -->
+<nav id="navbar" class="navbar">
     <ul>
         <li><a href="#about">על הבחירה שלך</a></li>
         <li><a href="#story">הסיפור שלי</a></li>
-        <li><a href="#audience">למי זה מתאים</a></li>
-        <li><a href="#topics">על מה נדבר</a></li>
+        <li><a href="#target">למי זה מתאים?</a></li>
+        <li><a href="#topics">על מה נדבר?</a></li>
         <li><a href="#value">הערך המוסף</a></li>
+        <li><a href="#choices">בחירות שעיצבו אותי</a></li>
         <li><a href="#contact">צור קשר</a></li>
     </ul>
 </nav>
 
-<!-- תוכן ראשי -->
+<!-- Main Content -->
 <main>
 
-<!-- עמוד שני -->
-<section id="about" class="section">
-    <h2>על הבחירה שלך</h2>
-    <p>בכל יום אנחנו בוחרים אם לשתף או לשתוק, אם לפחד או לנסות, אם להתקרב למי שאנחנו – או לברוח. חלק מהבחירות, עם הזמן, הן אלו שמרכיבות את הסיפור שלנו. אז איך בוחרים באמת? איך יודעים מה נכון דווקא כשיש רעש מסביב? "הבחירה שלך" היא הזמנה לעצור, להסתכל פנימה, ולבנות בחירה שנובעת ממי שאתם – לא ממה שמצופה מכם.</p>
-</section>
-
-<!-- עמוד שלישי -->
-<section id="story" class="section alt">
-    <h2>הסיפור שלי</h2>
-    <p>גם אצלי הדרכים נפגשו – כילד בפנימייה בלי מצפן, כקצין במודיעין עם אחריות על אחרים, וכאדם בוגר שחיפש משמעות בין השורות של החיים. בכל צומת כזה, הייתי צריך לבחור. לא תמיד הייתה לי ברירה, אבל תמיד ניסיתי למצוא למה כן.</p>
-    <p>נעים להכיר – דוד סויסא, מרצה, מלווה תהליכים אישיים לנוער, מלש״בים, סגלי הוראה ובן אדם שמאמין: גם כשלא בחרנו מה קרה לנו – אנחנו יכולים לבחור מה נעשה עם זה. פשוט לבחור נכון – גם כשלא הכל ברור!</p>
-</section>
-
-<!-- עמוד חמישי -->
-<section id="audience" class="section">
-    <h2>למי זה מתאים?</h2>
-    <ul>
-        <li>בני נוער בגילאי 16–18 בצומת חיים (צבא, מכינה, שנת שירות).</li>
-        <li>הורים למתבגרים שרוצים גשר אמיתי בגובה העיניים.</li>
-        <li>אנשי חינוך, מדריכים ורכזים שמחפשים פעילות עם ערך.</li>
-        <li>מפקדים בצה"ל שמחפשים לחזק חיילים עם כלים אמיתיים.</li>
-    </ul>
-    <blockquote>”כשאתה בוחר, אתה משנה את העתיד” – דיפאק צ׳ופרה</blockquote>
-</section>
-
-<!-- עמוד שישי -->
-<section id="topics" class="section alt">
-    <h2>על מה נדבר?</h2>
-    <p>בהרצאות ובמפגשים נדבר על: איך לבחור נכון גם כשהכל לא ברור, איך להפוך קושי להזדמנות, איך למצוא חוזקות דווקא בשברים, ואיך לצייר דרך חדשה מתוך עוצמה אמיתית.</p>
-    <p><strong>מה כולל הליווי האישי?</strong> חקירה עצמית, כתיבה אישית, הגדרת מטרות, זיהוי חסמים, בניית חוסן נפשי וליווי תומך עד להצלחה.</p>
-</section>
-
-<!-- אזור של הבחירות -->
-<section id="choices" class="section">
-    <h2>רגעי בחירה בחיי</h2>
-
-    <div class="choice-cards">
-
-        <div class="choice-card">
-            <img src="assets/images/pick1.jpg" alt="בחירה 1">
-            <p>בחרתי לא לשאול ‘למה זה קרה לי’ — אלא להתחיל לחפש ‘מה אני יכול לעשות עם זה’. זו הייתה הבחירה הראשונה שלי להפוך כאב לצמיחה.</p>
+    <!-- About Section -->
+    <section id="about" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2>על הבחירה שלך</h2>
+            <p>בכל יום אנחנו בוחרים אם לשתף או לשתוק, אם לפחד או לנסות, אם להתקרב למי שאנחנו – או לברוח.
+            חלק מהבחירות בונות אותנו. איך בוחרים נכון באמת? "הבחירה שלך" היא הזמנה לעצור ולהקשיב פנימה, לבחירה אמיתית מתוך עצמך.</p>
         </div>
+    </section>
 
-        <div class="choice-card">
-            <img src="assets/images/pick2.jpg" alt="בחירה 2">
-            <p>בחרתי להילחם ולא לוותר — גם כשאמרו שזה בלתי אפשרי. הפכתי להיות קצין במודיעין, וגיליתי שהמגבלות האמיתיות הן רק בראש.</p>
+    <!-- Story Section -->
+    <section id="story" class="section bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2>הסיפור שלי</h2>
+            <p>מילד בפנימייה בלי מצפן, דרך שירות כקצין במודיעין ועד למסע אישי ומשמעותי כבוגר – 
+            הבחירה לגדול מתוך האתגרים בנתה אותי. היום, אני דוד סויסא – מרצה ומלווה אישי, שמאמין שגם כשלא בחרנו מה קרה לנו – אנחנו יכולים לבחור מה נעשה עם זה.</p>
         </div>
+    </section>
 
-        <div class="choice-card">
-            <img src="assets/images/pick3.jpg" alt="בחירה 3">
-            <p>בחרתי להקים את ‘הבחירה שלך’ – כדי שכל נער ונערה ידעו: גם החלטה אחת אמיצה יכולה לשנות חיים שלמים.</p>
+    <!-- Target Audience Section -->
+    <section id="target" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2>למי זה מתאים?</h2>
+            <ul class="target-list">
+                <li>בני נוער לפני צבא / שנת שירות</li>
+                <li>הורים למתבגרים</li>
+                <li>אנשי חינוך ורכזים</li>
+                <li>מפקדים בצה"ל שמחפשים לעורר השראה</li>
+            </ul>
+            <blockquote>"כשאתה בוחר, אתה משנה את העתיד" – דיפאק צ'ופרה</blockquote>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- Topics Section -->
+    <section id="topics" class="section bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2>על מה נדבר?</h2>
+            <p>בחירות אמיצות, חוסן נפשי, התמודדות עם פחדים, והיכולת להגדיר לעצמך חזון אישי אמיתי.</p>
+            <p>בליווי האישי: חקירה עצמית, כתיבה, זיהוי חסמים, בניית חוסן והובלה עצמית – הכלים שיקדמו אותך קדימה.</p>
+        </div>
+    </section>
 
-<!-- עמוד תשיעי -->
-<section id="value" class="section alt">
-    <h2>הערך המוסף ב״הבחירה שלך״</h2>
-    <ul>
-        <li>הבנה שהבחירה היא כוח ולא חולשה.</li>
-        <li>גילוי אמונה פנימית והיכולת להנהיג את חיי.</li>
-        <li>תהליך שמותיר חותם עמוק ובונה ביטחון עצמי.</li>
-    </ul>
-</section>
+    <!-- Value Section -->
+    <section id="value" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2>הערך המוסף</h2>
+            <p>אנחנו לא מדברים רק על שינוי – אנחנו יוצרים אותו: חיזוק ההחלטיות, בניית מסלול אישי, העצמת תחושת המסוגלות וחיזוק הקשרים המשפחתיים והחברתיים.</p>
+        </div>
+    </section>
 
-<!-- עמוד צור קשר -->
-<section id="contact" class="section">
-    <h2>צור קשר</h2>
-    <form action="https://formspree.io/f/xwpoprpb" method="POST">
-        <input type="text" name="name" placeholder="שם מלא" required>
-        <input type="email" name="email" placeholder="דוא״ל" required>
-        <input type="text" name="company" placeholder="שם החברה">
-        <input type="text" name="phone" placeholder="טלפון">
-        <textarea name="message" placeholder="הודעה" required></textarea>
-        <button type="submit">שלח הודעה</button>
-    </form>
-</section>
+    <!-- Choices Section -->
+    <section id="choices" class="section" data-aos="fade-up">
+        <div class="container">
+            <h2>בחירות שעיצבו אותי</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="assets/images/pick1.jpg" alt="בחירה 1">
+                    <p>בחרתי לא לשאול 'למה זה קרה לי' אלא 'מה אני יכול לעשות עם זה'. הבחירה הראשונה להפוך כאב לצמיחה.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/pick2.jpg" alt="בחירה 2">
+                    <p>בחרתי להילחם ולא לוותר – והפכתי להיות קצין במודיעין. גיליתי שהמגבלות הן רק בראש.</p>
+                </div>
+                <div class="card">
+                    <img src="assets/images/pick3.jpg" alt="בחירה 3">
+                    <p>בחרתי להקים את "הבחירה שלך" – מתוך אמונה שהחלטה אמיצה אחת משנה חיים.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2>צור קשר</h2>
+            <form action="https://formspree.io/f/xwpoprpb" method="POST" class="contact-form">
+                <input type="text" name="name" placeholder="שם מלא" required>
+                <input type="email" name="email" placeholder="אימייל" required>
+                <input type="text" name="company" placeholder="שם החברה (לא חובה)">
+                <textarea name="message" placeholder="הודעה" required></textarea>
+                <button type="submit" class="button-primary">שלח הודעה</button>
+            </form>
+        </div>
+    </section>
 
 </main>
 
-<!-- פוטר -->
-<footer class="footer">
-    <p>"בסוף כל דרך יש בחירה – לבחור להמשיך, לבחור להשתנות, לבחור לגדול." - דוד סויסא</p>
-    <div class="social-links">
-        <a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/david-swissa" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+        <p>© 2025 דוד סויסא | הבחירה שלך</p>
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" class="fab fa-facebook-f"></a></li>
+            <li><a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" class="fab fa-instagram"></a></li>
+            <li><a href="https://www.linkedin.com/in/david-swissa" class="fab fa-linkedin-in"></a></li>
+        </ul>
     </div>
-    <p>כל הזכויות שמורות לדוד סויסא © 2025</p>
 </footer>
 
-<!-- כפתורים צפים -->
-<div class="floating-icons">
-    <a href="https://wa.me/972528982780" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/david-swissa" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-</div>
+<!-- Back to top -->
+<a href="#hero" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {speed: 700});
+</script>
+
+<script>
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 50){
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+</script>
 
 </body>
 </html>
