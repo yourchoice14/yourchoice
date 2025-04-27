@@ -1,85 +1,91 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>הבחירה שלך - אלמנטים</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8">
+    <title>הבחירה שלך - מבני תוכן</title>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body class="is-preload">
+<body>
 
-<!-- אזור באנר פשוט -->
-<section id="banner" style="background-color: #dbd1b4;">
-  <div class="inner">
-    <h1>אלמנטים באתר</h1>
-    <p>דוגמאות לעיצוב אלמנטים מהאתר</p>
-  </div>
+<!-- ניווט -->
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">דף הבית</a></li>
+        <li><a href="#choices">הבחירות שלי</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+    </ul>
+</nav>
+
+<!-- כותרת -->
+<section class="section">
+    <h2>מבני תוכן נוספים באתר</h2>
+    <p>דוגמאות לעיצוב אלמנטים שונים באתר</p>
 </section>
 
-<!-- אזור אלמנטים בסיסיים -->
-<section id="one" class="wrapper style1">
-  <div class="inner">
-    <header class="major">
-      <h2>טפסים, כפתורים, אייקונים ועוד</h2>
-    </header>
+<!-- כפתורים -->
+<section class="section alt">
+    <h3>כפתורים</h3>
+    <button>כפתור רגיל</button>
+    <button style="background-color: #ff7f50;">כפתור כתום</button>
+</section>
 
-    <!-- טופס דוגמא -->
-    <h3>טופס יצירת קשר:</h3>
-    <form class="contact-form" action="https://formspree.io/f/xwpoprpb" method="POST">
-      <input type="text" name="name" placeholder="שם מלא" required>
-      <input type="email" name="email" placeholder="אימייל" required>
-      <textarea name="message" placeholder="הודעה" rows="5" required></textarea>
-      <input type="submit" value="שלח">
+<!-- טפסים -->
+<section class="section">
+    <h3>טופס לדוגמה</h3>
+    <form action="#">
+        <input type="text" placeholder="שם מלא">
+        <input type="email" placeholder="דוא"ל">
+        <textarea placeholder="הודעה..."></textarea>
+        <button type="submit">שליחה</button>
     </form>
+</section>
 
-    <!-- כפתורים -->
-    <h3>כפתורים:</h3>
-    <ul class="actions stacked">
-      <li><a href="#" class="button primary">כפתור ראשי</a></li>
-      <li><a href="#" class="button">כפתור רגיל</a></li>
-    </ul>
+<!-- טקסטים -->
+<section class="section alt">
+    <h3>פסקת טקסט</h3>
+    <p>
+        כאן תוכל לראות איך טקסטים רגילים ייראו באתר - קריאים, נוחים לעין ובצבעים חמימים שמשדרים אמון וקרבה.
+    </p>
+</section>
 
-    <!-- רשימות -->
-    <h3>רשימות:</h3>
-    <ul>
-      <li>משימה ראשונה</li>
-      <li>משימה שנייה</li>
-      <li>משימה שלישית</li>
-    </ul>
-
-    <h3>רשימה ממוספרת:</h3>
-    <ol>
-      <li>שלב ראשון</li>
-      <li>שלב שני</li>
-      <li>שלב שלישי</li>
-    </ol>
-
-    <!-- ציטוט -->
-    <h3>ציטוט השראה:</h3>
+<!-- ציטוטים -->
+<section class="section">
+    <h3>ציטוט השראה</h3>
     <blockquote>
-      "כשאתה בוחר, אתה משנה את העתיד" – דיפאק צ'ופרה
+        "כשאתה בוחר, אתה משנה את העתיד" – דיפאק צ'ופרה
     </blockquote>
+</section>
 
-    <!-- אייקונים -->
-    <h3>אייקונים:</h3>
-    <ul class="icons">
-      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+<!-- רשימות -->
+<section class="section alt">
+    <h3>רשימה לדוגמה</h3>
+    <ul>
+        <li>ליווי אישי אחד על אחד</li>
+        <li>סדנאות חווייתיות לבחירה</li>
+        <li>הרצאות השראה למוסדות חינוך</li>
+        <li>כלים מעשיים למציאת כיוון וייעוד</li>
     </ul>
-
-  </div>
 </section>
 
 <!-- פוטר -->
-<footer id="footer">
-  <ul class="icons">
-    <li><a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
-    <li><a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
-    <li><a href="https://www.linkedin.com/in/david-swissa" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
-  </ul>
-  <p>כל הזכויות שמורות לדוד סויסא © 2025</p>
+<footer class="footer">
+    <div class="social-links">
+        <a href="https://www.facebook.com/share/1PLVWnuJM1/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/davidyourchoice/profilecard/?igsh=MWloZHA2bXpvMm1hOQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/david-swissa" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>כל הזכויות שמורות © דוד סויסא 2025</p>
 </footer>
+
+<!-- אייקונים צפים -->
+<div class="floating-icons">
+    <a href="https://wa.me/972528982780" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://www.instagram.com/davidyourchoice" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/davidyourchoice" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
+
+<!-- סקריפטים חיצוניים -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
