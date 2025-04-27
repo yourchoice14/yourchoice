@@ -1,10 +1,10 @@
 // --------------------------------------------------
-//             קובץ scripts.js לאתר הבחירה שלך
+//                סקריפטים לאתר הבחירה שלך
 // --------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  // הפעלת גלילה חלקה בקישורים פנימיים
+  /* --- גלילה חלקה בין קישורים --- */
   const scrollLinks = document.querySelectorAll('a[href^="#"]');
 
   scrollLinks.forEach(link => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // שינוי צבע רקע הניווט בגלילה
+  /* --- שינוי צבע הרקע של הניווט בגלילה --- */
   const header = document.getElementById('header');
 
   window.addEventListener('scroll', function () {
@@ -33,14 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // כפתור "חזור למעלה" (ניצור אותו בסוף העמוד)
+  /* --- כפתור חזור למעלה --- */
   const backToTopButton = document.createElement('div');
   backToTopButton.innerHTML = '⬆️';
   backToTopButton.id = 'back-to-top';
   document.body.appendChild(backToTopButton);
 
   window.addEventListener('scroll', function () {
-    if (window.scrollY > 400) {
+    if (window.scrollY > 500) {
       backToTopButton.style.display = 'flex';
     } else {
       backToTopButton.style.display = 'none';
@@ -56,28 +56,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// עיצוב לכפתור חזור למעלה
+/* --- עיצוב לכפתור חזור למעלה --- */
 const style = document.createElement('style');
 style.innerHTML = `
   #back-to-top {
     position: fixed;
     bottom: 30px;
     left: 30px;
-    background-color: #f6a623;
-    color: #ffffff;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    background: #f6a623;
+    color: white;
+    font-size: 24px;
+    display: none;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    border-radius: 50%;
     cursor: pointer;
-    display: none;
     z-index: 9999;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease;
   }
   #back-to-top:hover {
-    background-color: #e6951c;
+    background: #e6951c;
   }
 `;
 document.head.appendChild(style);
