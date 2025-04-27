@@ -1,6 +1,6 @@
-/* ---------------------------------------------------- */
-/*                  עיצוב ראשי לאתר הבחירה שלך          */
-/* ---------------------------------------------------- */
+/* -------------------------------------------------- */
+/*                סטייל ראשי - הבחירה שלך             */
+/* -------------------------------------------------- */
 
 /* הגדרות בסיסיות */
 * {
@@ -8,194 +8,217 @@
     padding: 0;
     box-sizing: border-box;
     direction: rtl;
-    font-family: 'Assistant', 'Heebo', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body {
+    font-family: 'Heebo', sans-serif;
     background-color: #f9f5f0;
     color: #5c4033;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* קישורים */
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-/* Header */
-.hero-section {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+a:hover {
+    color: #f6a623;
 }
 
-.hero-section .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 60px;
-    margin-bottom: 20px;
-    color: #ffffff;
-}
-
-.hero-content p {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #f9f5f0;
-}
-
-.button-primary {
+/* כפתורים */
+.button {
+    display: inline-block;
     background-color: #f6a623;
-    color: white;
+    color: #fff;
     padding: 12px 30px;
-    border: none;
     border-radius: 30px;
     font-size: 18px;
-    cursor: pointer;
-    text-decoration: none;
+    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.button-primary:hover {
+.button:hover {
     background-color: #e6951c;
 }
 
-/* Navbar */
-.navbar {
+/* ניווט עליון */
+#header {
     position: fixed;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background: #ffffff;
     padding: 10px 0;
     z-index: 1000;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.05);
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.navbar ul {
+#header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: #5c4033;
-    font-weight: bold;
+#header nav ul li {
+    display: inline-block;
+}
+
+#header nav ul li a {
+    font-weight: 700;
     font-size: 18px;
+    padding: 5px 15px;
     transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: #f6a623;
+/* Hero Section */
+.hero {
+    background: url('../images/david.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 0 20px;
 }
 
-/* Navbar כשגוללים */
-.navbar.scrolled {
-    background-color: #fff7e6;
+.hero::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
 }
 
-/* Sections */
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #f9f5f0;
+    margin-bottom: 30px;
+}
+
+/* אזורים כללים */
 .section {
-    padding: 80px 20px;
+    padding: 100px 20px;
+    text-align: center;
 }
 
-.bg-light {
-    background-color: #fefefe;
-}
-
-/* Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.section.light {
+    background-color: #ffffff;
 }
 
 /* כותרות */
 h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: 42px;
+    margin-bottom: 40px;
     color: #5c4033;
-    text-align: center;
 }
 
-p, li {
-    font-size: 20px;
-}
-
-/* רשימות */
-ul.target-list {
-    list-style: none;
-    padding: 0;
-}
-
-ul.target-list li {
-    margin: 10px 0;
-    padding-right: 20px;
-    position: relative;
-}
-
-ul.target-list li::before {
-    content: "✔️";
-    position: absolute;
-    right: 0;
-    color: #f6a623;
-}
-
-/* בלוקציט */
-blockquote {
-    font-style: italic;
+h3 {
+    font-size: 24px;
     margin-top: 20px;
-    text-align: center;
-    color: #5c4033;
+    margin-bottom: 10px;
 }
 
-/* Cards */
-.cards {
+/* טקסט כללי */
+p {
+    font-size: 18px;
+}
+
+/* אזור אודות */
+.split {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.split .text {
+    flex: 1;
+    min-width: 300px;
+    text-align: right;
+}
+
+.split .image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.split img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* אזור שירותים */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+}
+
+.service img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* בחירות שעיצבו אותי */
+.picks-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
-.card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+.pick {
+    background-color: #ffffff;
     padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.08);
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card img {
+.pick img {
+    width: 100%;
     border-radius: 12px;
     margin-bottom: 15px;
 }
 
 /* טופס צור קשר */
 .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -204,79 +227,57 @@ blockquote {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 15px;
     font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
 }
 
 .contact-form button {
     align-self: center;
+    width: 50%;
 }
 
-/* Footer */
+/* פוטר */
 #footer {
     background-color: #5c4033;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
-    padding: 30px 10px;
+    padding: 30px 20px;
+    margin-top: 60px;
 }
 
 #footer p {
     margin-bottom: 15px;
 }
 
-.social-icons {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
+.socials {
+    margin-top: 10px;
 }
 
-.social-icons li a {
-    color: #f6a623;
+.socials a {
+    margin: 0 10px;
     font-size: 24px;
+    color: #f6a623;
     transition: color 0.3s ease;
 }
 
-.social-icons li a:hover {
+.socials a:hover {
     color: #ffffff;
 }
 
-/* Back to top */
-.back-to-top {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background: #f6a623;
-    color: #ffffff;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-}
-
-.back-to-top:hover {
-    background: #e6951c;
-}
-
-/* התאמות למסכים קטנים */
+/* רספונסיביות */
 @media (max-width: 768px) {
-    .hero-content h1 {
+    .split {
+        flex-direction: column;
+    }
+
+    .hero h1 {
         font-size: 40px;
     }
-    .hero-content p {
+
+    .hero p {
         font-size: 20px;
-    }
-    .navbar ul {
-        flex-direction: column;
-        background-color: #ffffff;
-    }
-    .navbar ul li {
-        margin-bottom: 10px;
     }
 }
